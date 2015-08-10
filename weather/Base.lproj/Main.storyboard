@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8121.17" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xhL-dt-3r0">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8101.14"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Current Weather-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="weather" customModuleProvider="target" sceneMemberID="viewController">
@@ -23,21 +23,61 @@
                                     <constraint firstAttribute="width" constant="50" id="HyH-e7-wui"/>
                                 </constraints>
                             </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="IDS-2g-peh">
+                                <rect key="frame" x="254" y="290" width="92.5" height="20"/>
+                                <subviews>
+                                    <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="5hE-pc-cuq">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="20"/>
+                                    </activityIndicatorView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Loading..." lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gNa-xy-XHk">
+                                        <rect key="frame" x="25" y="0.0" width="67.5" height="20"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="wyj-Or-Wjw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Hgu-O8-bmy"/>
-                            <constraint firstItem="wyj-Or-Wjw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="XPh-D8-6QZ"/>
+                            <constraint firstItem="IDS-2g-peh" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="gAE-lz-rZe"/>
                             <constraint firstItem="wyj-Or-Wjw" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="rfb-Hb-TAt"/>
+                            <constraint firstItem="IDS-2g-peh" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sPA-aA-SA4"/>
                             <constraint firstItem="wyj-Or-Wjw" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="sXF-K0-WOO"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Current Weather" id="wJi-TK-XsY">
+                        <barButtonItem key="rightBarButtonItem" systemItem="refresh" id="ve8-Xf-Uje">
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="rZW-m0-uUA"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
+                        <outlet property="activityIndicator" destination="5hE-pc-cuq" id="ZP6-qe-MMY"/>
+                        <outlet property="refreshButton" destination="ve8-Xf-Uje" id="36t-d9-3Qo"/>
+                        <outlet property="statusLabel" destination="gNa-xy-XHk" id="Dz4-Az-RiK"/>
                         <outlet property="weatherIconImageView" destination="wyj-Or-Wjw" id="afQ-7r-wPm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="260" y="236"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="HZp-Du-gOm">
+            <objects>
+                <navigationController id="xhL-dt-3r0" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v88-KB-8WT">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="OKY-x8-X0N"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uMg-Va-INv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-421" y="236"/>
         </scene>
     </scenes>
 </document>
