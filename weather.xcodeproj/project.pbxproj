@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E015A9691B7832180052E77A /* CacheTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E015A9681B7832180052E77A /* CacheTests.swift */; };
+		E06146A91B79643300CCEFF9 /* boy.mov in Resources */ = {isa = PBXBuildFile; fileRef = E06146A81B79643300CCEFF9 /* boy.mov */; };
 		E0794B111B763CD1006D5410 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0794B101B763CD1006D5410 /* AppDelegate.swift */; };
 		E0794B131B763CD1006D5410 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0794B121B763CD1006D5410 /* ViewController.swift */; };
 		E0794B161B763CD1006D5410 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0794B141B763CD1006D5410 /* Main.storyboard */; };
@@ -40,6 +41,7 @@
 
 /* Begin PBXFileReference section */
 		E015A9681B7832180052E77A /* CacheTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CacheTests.swift; sourceTree = "<group>"; };
+		E06146A81B79643300CCEFF9 /* boy.mov */ = {isa = PBXFileReference; lastKnownFileType = video.quicktime; path = boy.mov; sourceTree = "<group>"; };
 		E0794B0D1B763CD1006D5410 /* weather.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = weather.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0794B101B763CD1006D5410 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0794B121B763CD1006D5410 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -114,6 +116,7 @@
 				E0794B191B763CD1006D5410 /* LaunchScreen.storyboard */,
 				E0794B1C1B763CD1006D5410 /* Info.plist */,
 				E0794B421B765C57006D5410 /* Settings.plist */,
+				E06146A81B79643300CCEFF9 /* boy.mov */,
 			);
 			path = weather;
 			sourceTree = "<group>";
@@ -260,6 +263,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0794B1B1B763CD1006D5410 /* LaunchScreen.storyboard in Resources */,
+				E06146A91B79643300CCEFF9 /* boy.mov in Resources */,
 				E0794B431B765C57006D5410 /* Settings.plist in Resources */,
 				E0794B181B763CD1006D5410 /* Assets.xcassets in Resources */,
 				E0794B161B763CD1006D5410 /* Main.storyboard in Resources */,

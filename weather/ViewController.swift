@@ -8,6 +8,8 @@
 
 import UIKit
 import CoreLocation
+import AVKit
+import AVFoundation
 
 class ViewController: UIViewController {
 
@@ -147,6 +149,15 @@ class ViewController: UIViewController {
 
     private func updateWeatherIcon() {
         self.weatherIconImageView.image = self.currentWeatherImage
+    }
+
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let destination = segue.destinationViewController as? AVPlayerViewController {
+            let path = NSBundle.mainBundle().pathForResource("boy", ofType:"mov")
+            let url = NSURL.fileURLWithPath(path!)
+            destination.player = AVPlayer(URL: url)
+            destination.player?.play()
+        }
     }
 
 }

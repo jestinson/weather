@@ -26,12 +26,16 @@
                                             <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="22W-0P-AIw">
                                                 <rect key="frame" x="0.0" y="0.0" width="510" height="25"/>
                                                 <subviews>
-                                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyj-Or-Wjw">
+                                                    <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wyj-Or-Wjw">
                                                         <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
+                                                        <gestureRecognizers/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="25" id="2IJ-lm-QQs"/>
                                                             <constraint firstAttribute="width" constant="25" id="HyH-e7-wui"/>
                                                         </constraints>
+                                                        <connections>
+                                                            <outletCollection property="gestureRecognizers" destination="S0i-k9-8Mp" appends="YES" id="sMW-xS-pFg"/>
+                                                        </connections>
                                                     </imageView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Temperature" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoC-0L-yvQ">
                                                         <rect key="frame" x="30" y="0.0" width="480" height="25"/>
@@ -134,6 +138,11 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer numberOfTapsRequired="3" id="S0i-k9-8Mp">
+                    <connections>
+                        <segue destination="GRQ-kG-64m" kind="presentation" id="CYb-FU-5qN"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="260" y="236"/>
         </scene>
@@ -152,6 +161,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uMg-Va-INv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-421" y="236"/>
+        </scene>
+        <!--AV Player View Controller-->
+        <scene sceneID="4uQ-n3-PS5">
+            <objects>
+                <avPlayerViewController videoGravity="AVLayerVideoGravityResizeAspect" id="GRQ-kG-64m" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0Eh-Po-cAP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="260" y="931"/>
         </scene>
     </scenes>
 </document>
