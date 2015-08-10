@@ -7,6 +7,7 @@
 //
 
 import XCTest
+@testable import weather
 
 class weatherTests: XCTestCase {
     
@@ -20,16 +21,17 @@ class weatherTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock() {
-            // Put the code you want to measure the time of here.
+    func testCurrentWeather() {
+        guard let manager = WeatherManager() else {
+            XCTFail("Could not create WeatherManager")
+            return
         }
+        let currentWeatherExpectation = self.expectationWithDescription("Current weather parsed")
+        manager.requestCurrentWeatherForLocation("35.959908", longitude: "-86.816636") {
+            (currentWeather: CurrentWeather) in
+            currentWeatherExpectation.fulfill()
+        }
+        self.waitForExpectationsWithTimeout(5, handler: nil)
     }
     
 }

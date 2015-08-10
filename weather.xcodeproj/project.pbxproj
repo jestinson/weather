@@ -14,6 +14,9 @@
 		E0794B1B1B763CD1006D5410 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E0794B191B763CD1006D5410 /* LaunchScreen.storyboard */; };
 		E0794B261B763CD1006D5410 /* weatherTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0794B251B763CD1006D5410 /* weatherTests.swift */; };
 		E0794B311B763CD1006D5410 /* weatherUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0794B301B763CD1006D5410 /* weatherUITests.swift */; };
+		E0794B3F1B764554006D5410 /* WeatherManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0794B3E1B764554006D5410 /* WeatherManager.swift */; };
+		E0794B431B765C57006D5410 /* Settings.plist in Resources */ = {isa = PBXBuildFile; fileRef = E0794B421B765C57006D5410 /* Settings.plist */; };
+		E0794B451B768174006D5410 /* CurrentWeatherModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0794B441B768174006D5410 /* CurrentWeatherModels.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +50,9 @@
 		E0794B2C1B763CD1006D5410 /* weatherUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = weatherUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0794B301B763CD1006D5410 /* weatherUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = weatherUITests.swift; sourceTree = "<group>"; };
 		E0794B321B763CD1006D5410 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E0794B3E1B764554006D5410 /* WeatherManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WeatherManager.swift; sourceTree = "<group>"; };
+		E0794B421B765C57006D5410 /* Settings.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Settings.plist; sourceTree = "<group>"; };
+		E0794B441B768174006D5410 /* CurrentWeatherModels.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CurrentWeatherModels.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,6 +109,9 @@
 				E0794B171B763CD1006D5410 /* Assets.xcassets */,
 				E0794B191B763CD1006D5410 /* LaunchScreen.storyboard */,
 				E0794B1C1B763CD1006D5410 /* Info.plist */,
+				E0794B3E1B764554006D5410 /* WeatherManager.swift */,
+				E0794B421B765C57006D5410 /* Settings.plist */,
+				E0794B441B768174006D5410 /* CurrentWeatherModels.swift */,
 			);
 			path = weather;
 			sourceTree = "<group>";
@@ -229,6 +238,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0794B1B1B763CD1006D5410 /* LaunchScreen.storyboard in Resources */,
+				E0794B431B765C57006D5410 /* Settings.plist in Resources */,
 				E0794B181B763CD1006D5410 /* Assets.xcassets in Resources */,
 				E0794B161B763CD1006D5410 /* Main.storyboard in Resources */,
 			);
@@ -255,8 +265,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E0794B3F1B764554006D5410 /* WeatherManager.swift in Sources */,
 				E0794B131B763CD1006D5410 /* ViewController.swift in Sources */,
 				E0794B111B763CD1006D5410 /* AppDelegate.swift in Sources */,
+				E0794B451B768174006D5410 /* CurrentWeatherModels.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +410,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				INFOPLIST_FILE = weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.jestinson.weather;
@@ -409,6 +422,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				INFOPLIST_FILE = weather/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.github.jestinson.weather;
