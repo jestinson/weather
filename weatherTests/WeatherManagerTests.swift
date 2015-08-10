@@ -1,5 +1,5 @@
 //
-//  weatherTests.swift
+//  WeatherManagerTests.swift
 //  weatherTests
 //
 //  Created by Stinson, Justin on 8/8/15.
@@ -9,7 +9,7 @@
 import XCTest
 @testable import weather
 
-class weatherTests: XCTestCase {
+class WeatherManagerTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
@@ -33,5 +33,5 @@ class weatherTests: XCTestCase {
         }
         self.waitForExpectationsWithTimeout(5, handler: nil)
     }
-    
+
 }

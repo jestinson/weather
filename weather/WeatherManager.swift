@@ -16,9 +16,7 @@ class WeatherManager {
 
     private let apiKey: String
 
-    static private var iconCache = [String: (UIImage, NSDate)]()
-
-    static private let maxIconCacheSize = 10
+    static private var iconCache = Cache<UIImage>(maximumNumberOfItems: 10)
 
     init?() {
         guard let path = NSBundle.mainBundle().pathForResource("Settings", ofType: "plist") else {
@@ -89,8 +87,7 @@ class WeatherManager {
             let task = self.getData(iconURL, completion: {
                 (data: NSData?, response: NSURLResponse?, error: NSError?) -> Void in
                 if let data = data, image = UIImage(data: data) {
-                    WeatherManager.iconCache[iconName] = (image, NSDate())
-                    WeatherManager.removeOldestIconFromCacheIfNeeded()
+                    WeatherManager.iconCache[iconName] = image
                     completion(image)
                 }
             })
@@ -150,18 +147,6 @@ class WeatherManager {
         }
         
         return task
-    }
-
-    /// Removes the oldest icon from the cache
-    /// - Returns: Boolean indicating if a value was removed from the cache or not
-    private class func removeOldestIconFromCacheIfNeeded() -> Bool {
-        let cacheSize = WeatherManager.iconCache.count
-        if cacheSize < 1 || cacheSize < WeatherManager.maxIconCacheSize {
-            return false
-        }
-
-        // TODO: finish implementation
-        return false
     }
 
 }
